@@ -103,5 +103,9 @@ app.get("/historial", (req, res) => {
   res.send(historial);*/
   controller.getUsers(res);
 });
+app.get("/libros", (req, res) => {
+
+  controller.getLibros(res);
+});
 
 exports.app = app;
