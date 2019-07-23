@@ -108,4 +108,21 @@ app.get("/libros", (req, res) => {
   controller.getLibros(res);
 });
 
+app.get("/autores", (req, res) => {
+
+  controller.getAutores(res);
+});
+app.get("/comentarios", (req, res) => {
+
+  controller.getComentarios(res);
+});
+app.get("/historial", (req, res) => {
+
+  controller.getHistorial(res);
+});
+app.get("/publicaciones", (req, res) => {
+
+  controller.getPublicaciones(res);
+});
+
 exports.app = app;

@@ -1,6 +1,11 @@
 const mongoose = require("mongoose");
 const User = require("./models/User");
 const Libros= require("./models/Libros");
+const Autores= require("./models/Autores");
+const Publicaciones= require("./models/Publicaciones");
+const Comentarios= require("./models/Comentarios");
+const Historial= require("./models/Historial");
+
 
 class Controller{
     constructor(){
@@ -30,6 +35,30 @@ class Controller{
         Libros.find({}, (err, libros) => {
             if(err) throw err;
             res.send( libros );
+        })
+    }
+    getAutores(res){
+        Autores.find({}, (err, autores) => {
+            if(err) throw err;
+            res.send( autores );
+        })
+    }
+    getComentarios(res){
+        Comentarios.find({}, (err, comentarios) => {
+            if(err) throw err;
+            res.send( comentarios );
+        })
+    }
+    getHistorial(res){
+        Historial.find({}, (err, historial) => {
+            if(err) throw err;
+            res.send( historial );
+        })
+    }
+    getPublicaciones(res){
+        Publicaciones.find({}, (err, publicaciones) => {
+            if(err) throw err;
+            res.send( publicaciones );
         })
     }
 
